@@ -1,0 +1,47 @@
+<div class="contactForm">
+    <div class="lhs">
+        <h1>Get in touch</h1>
+        <p>If you think we’re a good fit to work with, connect with us and we can take this further by scheduling a quick video call.  We look forward to working with you to create high-quality YouTube content that engages and entertains your audience.</p>
+    </div>
+    <div class="rhs">
+        <form action="">
+            <input id="firstName" type="text" placeholder="First Name">
+            <input id="lastName" type="text" placeholder="Last Name">
+            <input id="emailAddress" type="text" placeholder="Email Address">
+            <input id="btn" type="submit" value="Contact Us">
+        </form>
+    </div>
+</div>
+
+<style>
+    .contactForm{
+        max-width: 960px;
+        margin: 0% auto 6% auto;
+        background-color:  #ad6800;
+        border-radius: 10px;
+        display: inline-flex;
+        text-align: left;
+        justify-items: center;
+        align-items: center;
+    }
+    h1, p{
+        margin: 0%;
+    }
+    .lhs{
+        max-width: 36%;
+        padding: 5% 5%;
+    }
+    input{
+        margin: 1% 0%;
+        border-radius: 5px;
+    }
+    #btn {
+        padding: 1% 3%;
+        font-size: 16px;
+        color: #fff;
+        background-color: black;
+        border: none;
+        box-shadow: 0 0 10px black;
+        margin: 0% 5%;
+    }
+</style>
