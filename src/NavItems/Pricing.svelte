@@ -16,13 +16,12 @@
     .pricingSection{
         max-width: 960px;
         margin: 10% auto;
-        overflow: hidden;
     }
     .pricingCards{
         max-width: 960px;
         display: flex;
         justify-content: space-between;
-        overflow-x: scroll;
+        overflow-x: overlay;
         margin-top: 5%;
     }
     h1{
@@ -43,7 +42,11 @@
     }
     @media(max-width: 960px){
         .pricingSection{
-            margin-bottom: 40%;
+            margin-bottom: 40%;  
+            padding-left: 5%;
+        }
+        h1, h5{
+            padding: 5% 5% 5% 0%;
         }
     }
     @media(max-width: 640px){

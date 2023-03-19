@@ -45,6 +45,7 @@
     @media(max-width: 960px){
         .container{
             margin-bottom: 35%;
+            padding: 5% 5%;
         }
     }
     @media (max-width: 640px)

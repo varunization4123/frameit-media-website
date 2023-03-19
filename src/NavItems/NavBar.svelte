@@ -38,6 +38,7 @@
     @media(max-width: 940px){
         nav{
             margin-bottom: 20%;
+            padding: 5% 5%;
         }
         nav a{
             display: none;

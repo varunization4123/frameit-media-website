@@ -24,7 +24,6 @@
 <style>
 	main {
 		text-align: center;
-		padding: 1em;
 		max-width: 960px;
 		margin: 0 auto;
 		overflow: hidden;
@@ -35,6 +34,7 @@
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
+			padding: 10% 15%;
 		}
 	}
 </style>

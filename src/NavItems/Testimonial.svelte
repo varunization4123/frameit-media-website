@@ -32,9 +32,6 @@
 </div>
 
 <style>
-    .testimonialSection{
-        overflow: hidden;
-    }
     .cards{
         max-width: 960px;
         margin: 0% auto;
@@ -47,6 +44,10 @@
     @media(max-width: 960px){
         .testimonialSection{
             margin-bottom: 40%;
+            padding-left: 5%;
+        }
+        h1{
+            padding: 5% 5% 5% 0%;
         }
     }
     @media(max-width: 640px){

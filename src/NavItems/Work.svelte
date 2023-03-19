@@ -46,6 +46,7 @@
     @media(max-width: 960px){
         div{
             margin-bottom: 30%;
+            padding: 5% 5%;
         }
     }
     @media(max-width: 640px){

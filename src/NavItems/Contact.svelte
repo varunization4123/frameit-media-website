@@ -49,7 +49,7 @@
             display: block;
             text-align: center;
             padding: 5% 3%;
-            margin-bottom: 20%;
+            margin: 0% 5% 20% 5%;
         }
         .lhs{
             max-width: 100%;
