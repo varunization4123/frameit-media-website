@@ -30,7 +30,7 @@
 		overflow: hidden;
 	}
 	.spacer{
-		height: 160px;
+		height: 220px;
 	}
 	@media (min-width: 640px) {
 		main {

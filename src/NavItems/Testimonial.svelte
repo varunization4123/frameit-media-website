@@ -37,8 +37,8 @@
     }
     .cards{
         max-width: 960px;
-        margin: 2% 2%;
-        display: inline-flex;
+        margin: 0% auto;
+        display: flex;
         overflow-x: scroll;
     }
     ::-webkit-scrollbar{

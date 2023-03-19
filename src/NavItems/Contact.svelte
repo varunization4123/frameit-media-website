@@ -44,4 +44,14 @@
         box-shadow: 0 0 10px black;
         margin: 0% 5%;
     }
+    @media(max-width: 800px){
+        .contactForm{
+            display: block;
+            text-align: center;
+            padding-bottom: 5%;
+        }
+        .lhs{
+            max-width: 100%;
+        }
+    }
 </style>

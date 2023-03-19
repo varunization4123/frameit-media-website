@@ -16,8 +16,8 @@
         border: solid;
         border-radius: 10px;
         border-color: #fff;
-        padding: 6% 6%;
-        margin: 5% 2%;
+        padding: 4% 4%;
+        margin: 5% 5%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
         grid-template-rows: 1fr 0.3fr;
@@ -37,9 +37,10 @@
     }
     @media (max-width: 940px){
         .testimonial{
-            max-width: 240px;
+            min-width: 240px;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             margin: 1% 1%;
+            padding: 3% 3%;
         }
         img{
             max-width: 120px;
