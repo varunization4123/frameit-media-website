@@ -45,7 +45,7 @@
     }
     @media(max-width: 960px){
         div{
-            margin-bottom: 20%;
+            margin-bottom: 30%;
         }
     }
     @media(max-width: 640px){

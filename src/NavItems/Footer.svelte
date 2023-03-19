@@ -61,5 +61,9 @@
         .rhs{
             display: inline;
         }
+        h4{
+            font-size: 12px;
+            font-weight: 200;
+        }
     }
 </style>

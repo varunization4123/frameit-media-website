@@ -43,7 +43,7 @@
     }
     @media(max-width: 960px){
         .pricingSection{
-            margin-bottom: 30%;
+            margin-bottom: 40%;
         }
     }
     @media(max-width: 640px){

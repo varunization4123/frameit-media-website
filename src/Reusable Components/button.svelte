@@ -25,10 +25,10 @@ button a {
 }
 @media(max-width: 640px){
     button{
-        padding: 4px 8px;
+        padding: 8px 12px;
     }
     button a{
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 </style>

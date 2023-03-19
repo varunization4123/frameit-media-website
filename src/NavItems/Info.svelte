@@ -18,7 +18,7 @@
     }
     @media(max-width: 940px){
         div{
-            margin-bottom: 30%;
+            margin-bottom: 35%;
             justify-content: center;
         }
     }

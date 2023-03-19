@@ -44,11 +44,12 @@
         box-shadow: 0 0 10px black;
         margin: 0% 5%;
     }
-    @media(max-width: 800px){
+    @media(max-width: 960px){
         .contactForm{
             display: block;
             text-align: center;
             padding: 5% 3%;
+            margin-bottom: 20%;
         }
         .lhs{
             max-width: 100%;

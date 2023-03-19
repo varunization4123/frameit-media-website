@@ -18,7 +18,7 @@
         width: 100%;
         max-width: 280px;
         align-items: start;
-        margin: 1% 1%;
+        margin: 6% 1%;
     }
     h3, p{
         text-align: start;
