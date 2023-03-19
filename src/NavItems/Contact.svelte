@@ -48,10 +48,18 @@
         .contactForm{
             display: block;
             text-align: center;
-            padding-bottom: 5%;
+            padding: 5% 3%;
         }
         .lhs{
             max-width: 100%;
+        }
+        #btn{
+            margin: 5% 25% 5% 25%;
+        }
+    }
+    @media(max-width: 504px){
+        #btn{
+            margin: 5% 15% 5% 15%;
         }
     }
 </style>
