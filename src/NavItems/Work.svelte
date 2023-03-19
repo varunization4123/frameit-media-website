@@ -43,6 +43,11 @@
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         grid-template-rows: auto;
     }
+    @media(max-width: 960px){
+        div{
+            margin-bottom: 20%;
+        }
+    }
     @media(max-width: 640px){
         h1{
             font-size: 22px;

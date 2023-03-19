@@ -44,6 +44,11 @@
     ::-webkit-scrollbar{
         width: 0px;
     }
+    @media(max-width: 960px){
+        .testimonialSection{
+            margin-bottom: 30%;
+        }
+    }
     @media(max-width: 640px){
         h1{
             font-size: 22px;

@@ -42,6 +42,11 @@
         border: none;
         border-radius: 10px;
     }
+    @media(max-width: 960px){
+        .container{
+            margin-bottom: 30%;
+        }
+    }
     @media (max-width: 640px)
     {
         h1{
