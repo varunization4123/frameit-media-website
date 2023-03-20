@@ -1,35 +1,31 @@
 <script>
     import TestimonialCard from '../Cards/TestimonialCard.svelte';
+    import IntersectionObserver from "svelte-intersection-observer";
+    import {fade, fly} from "svelte/transition";
+    let testimonials = [
+        {testimonial: "Everything is possible with FrameIt Media's expert team of editors, Thumbnail Designers, Content Writers and Community Managers.They just make the whole process super smooth, I’ve never had to follow-up with them for any delays or issues of sort.They have an incredible feedback and correction system, making even the feedback system feellike a breeze.", name: "Varun Mayya, CEO Avalon", img :"/images/Testimonial.png"},
+        {testimonial: "Everything is possible with FrameIt Media's expert team of editors, Thumbnail Designers, Content Writers and Community Managers.They just make the whole process super smooth, I’ve never had to follow-up with them for any delays or issues of sort.They have an incredible feedback and correction system, making even the feedback system feellike a breeze.", name: "Abhinav Arora, CEO Avalon", img :"/images/Testimonial.png"},
+        {testimonial: "Everything is possible with FrameIt Media's expert team of editors, Thumbnail Designers, Content Writers and Community Managers.They just make the whole process super smooth, I’ve never had to follow-up with them for any delays or issues of sort.They have an incredible feedback and correction system, making even the feedback system feellike a breeze.", name: "Shashank Udupa, CEO Avalon", img :"/images/Testimonial.png"},
+    ];
+    let node;
 </script>
 
-<div class="testimonialSection">
-    <h1>
-    We’ve worked with lots of creators over the years
-    </h1>
-    <div class="cards">
-        <TestimonialCard testimonial='Everything is possible with FrameIt Media’s
-        expert team of editors, Thumbnail Designers,
-        Content Writers and Community Managers.They just make the whole process super smooth,
-        I’ve never had to follow-up with them for any
-        delays or issues of sort.They have an incredible feedback and correction
-        system, making even the feedback system feel
-        like a breeze.' name='Varun Mayya, CEO Avalon' img='/images/Testimonial.png'/>
-        <TestimonialCard testimonial='Everything is possible with FrameIt Media’s
-        expert team of editors, Thumbnail Designers,
-        Content Writers and Community Managers.They just make the whole process super smooth,
-        I’ve never had to follow-up with them for any
-        delays or issues of sort.They have an incredible feedback and correction
-        system, making even the feedback system feel
-        like a breeze.' name='Varun Mayya, CEO Avalon' img='/images/Testimonial.png'/>
-        <TestimonialCard testimonial='Everything is possible with FrameIt Media’s
-        expert team of editors, Thumbnail Designers,
-        Content Writers and Community Managers.They just make the whole process super smooth,
-        I’ve never had to follow-up with them for any
-        delays or issues of sort.They have an incredible feedback and correction
-        system, making even the feedback system feel
-        like a breeze.' name='Varun Mayya, CEO Avalon' img='/images/Testimonial.png'/>
+<IntersectionObserver element={node} let:intersecting>
+    <div bind:this={node}>
+        {#if intersecting}
+        <div class="testimonialSection" transition:fade={{delay:300, duration:500}}>
+            <h1 transition:fly="{{ y: 100, duration: 600 }}">
+            We’ve worked with lots of creators over the years
+            </h1>
+            <div class="cards">
+                {#each testimonials as testimonial}
+                <TestimonialCard testimonial={testimonial.testimonial} name={testimonial.name} img={testimonial.img}/>
+                {/each}
+            </div>
+        </div>
+        {/if}
     </div>
-</div>
+</IntersectionObserver> 
 
 <style>
     .cards{

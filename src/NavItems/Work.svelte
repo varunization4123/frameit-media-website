@@ -1,21 +1,34 @@
 <script>
     import WorkCard from "../Cards/WorkCard.svelte";
+    let works = [
+        {style:"Vox Style Animaion", detail:"Stats & graph visualisation", video: "https://www.youtube.com/embed/TByW5-HDYTA"},
+        {style:"Johnny Harris style editing", detail:"Maps & Borders animation", video: "https://www.youtube.com/embed/TByW5-HDYTA"},
+        {style:"illui by Mike Lamb", detail:"Illustrations as 2D animations", video: "https://www.youtube.com/embed/TByW5-HDYTA"},
+        {style:"Mr Beast style editng", detail:"Super fast paced + animated subtitles", video: "https://www.youtube.com/embed/TByW5-HDYTA"},
+        {style:"Ali Abdaal", detail:"Illustrated visual cues", video: "https://www.youtube.com/embed/TByW5-HDYTA"},
+        {style:"Niklas Christl", detail:"Visual Story telling", video: "https://www.youtube.com/embed/TByW5-HDYTA"},
+        ];
+    import IntersectionObserver from "svelte-intersection-observer";
+    import {fade, fly} from "svelte/transition";
+
+    let node;
 </script>
 
-
-<div>
-    <h1>Our previous work, our pride</h1>
-    <h3>We’ve re-created some of the most famous styles, such as Vox Animation, Johnny Harris, Athletic Interest, Ali Abdaal, Cred, Patriot Act and more...</h3>
-    <div class="work">
-        <WorkCard style="Vox style animation" detail="Statistics and graph visualization" video='https://www.youtube.com/embed/TByW5-HDYTA'/>
-        <WorkCard style="Johnny Harris style editing" detail="Maps & Borders animation" video='https://www.youtube.com/embed/TByW5-HDYTA'/>
-        <WorkCard style="illui by Mike Lamb" detail="Illustrations as 2D animations" video='https://www.youtube.com/embed/TByW5-HDYTA'/>
-        <WorkCard style="Mr Beast style editng" detail="Super fast paced + animated subtitles" video='https://www.youtube.com/embed/TByW5-HDYTA'/>
-        <WorkCard style="Ali Abdaal" detail="Illustrated visual cues" video='https://www.youtube.com/embed/TByW5-HDYTA'/>
-        <WorkCard style="Niklas Christl" detail="Visual Story telling" video='https://www.youtube.com/embed/TByW5-HDYTA'/>
+<IntersectionObserver element={node} let:intersecting>
+    <div bind:this={node}>
+        {#if intersecting}
+        <div>
+            <h1 transition:fly="{{ y: 100, duration: 600 }}">Our previous work, our pride</h1>
+            <h3 transition:fly="{{ y: 100, duration: 600 }}">We’ve re-created some of the most famous styles, such as Vox Animation, Johnny Harris, Athletic Interest, Ali Abdaal, Cred, Patriot Act and more...</h3>
+            <div class="work" transition:fade={{delay:300, duration:500}}>
+                {#each works as work}
+                <WorkCard style={work.style} detail={work.detail} video={work.video}/>
+                {/each}
+            </div>
+        </div>
+        {/if}
     </div>
-    
-</div>
+</IntersectionObserver> 
 
 <style>
     div{

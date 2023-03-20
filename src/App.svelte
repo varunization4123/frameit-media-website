@@ -7,12 +7,13 @@
     import Work from "./NavItems/Work.svelte";
     import Contact from "./NavItems/Contact.svelte";
     import Footer from "./NavItems/Footer.svelte";
+	
 </script>
 
 <main>
 	<NavBar />
 	<Hero />
-	<Info />
+	<Info intro:true/>
 	<Pricing />
 	<Testimonial />
 	<Work />

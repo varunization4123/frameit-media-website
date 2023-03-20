@@ -1,17 +1,30 @@
-<div class="contactForm">
-    <div class="lhs">
-        <h1>Get in touch</h1>
-        <p>If you think we’re a good fit to work with, connect with us and we can take this further by scheduling a quick video call.  We look forward to working with you to create high-quality YouTube content that engages and entertains your audience.</p>
+<script>
+    import IntersectionObserver from "svelte-intersection-observer";
+    import {fade, fly} from "svelte/transition";
+
+    let node;
+</script>
+
+<IntersectionObserver element={node} let:intersecting>
+    <div bind:this={node}>
+        {#if intersecting}
+        <div class="contactForm" transition:fade={{delay:300, duration: 500}}>
+            <div class="lhs">
+                <h1 transition:fly="{{ y: 100, duration: 600 }}">Get in touch</h1>
+                <p transition:fly="{{ y: 100, duration: 600 }}">If you think we’re a good fit to work with, connect with us and we can take this further by scheduling a quick video call.  We look forward to working with you to create high-quality YouTube content that engages and entertains your audience.</p>
+            </div>
+            <div class="rhs">
+                <form action="">
+                    <input id="firstName" type="text" placeholder="First Name">
+                    <input id="lastName" type="text" placeholder="Last Name">
+                    <input id="emailAddress" type="text" placeholder="Email Address">
+                    <input id="btn" type="submit" value="Contact Us">
+                </form>
+            </div>
+        </div>
+        {/if}
     </div>
-    <div class="rhs">
-        <form action="">
-            <input id="firstName" type="text" placeholder="First Name">
-            <input id="lastName" type="text" placeholder="Last Name">
-            <input id="emailAddress" type="text" placeholder="Email Address">
-            <input id="btn" type="submit" value="Contact Us">
-        </form>
-    </div>
-</div>
+</IntersectionObserver> 
 
 <style>
     .contactForm{
