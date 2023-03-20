@@ -26,15 +26,15 @@
 		text-align: center;
 		max-width: 960px;
 		margin: 0 auto;
-		overflow: hidden;
+		overflow: visible;
 	}
 	.spacer{
 		height: 220px;
 	}
-	@media (min-width: 640px) {
+	@media (max-width: 640px) {
 		main {
 			max-width: none;
-			padding: 10% 15%;
+			padding: 5% 5%;
 		}
 	}
 </style>

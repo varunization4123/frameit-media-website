@@ -15,6 +15,7 @@ button{
     border-radius: 3px;
     transition: transform 0.3s ease-out;
     box-shadow: 0 0 30px #c47500;
+    overflow: visible;
 }
 button:hover{
     transform: translate(0px, 4px);

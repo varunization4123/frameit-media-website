@@ -24,6 +24,7 @@
         justify-content: space-between;
         max-width: 960px;
         margin: 0% auto;
+        overflow: visible;
     }
     nav a{
         display: inline;
@@ -37,7 +38,7 @@
     }
     @media(max-width: 940px){
         nav{
-            margin-bottom: 20%;
+            margin-bottom: 5%;
             padding: 5% 5%;
         }
         nav a{
