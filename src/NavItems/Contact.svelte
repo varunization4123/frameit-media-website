@@ -2,16 +2,17 @@
     import IntersectionObserver from "svelte-intersection-observer";
     import {fade, fly} from "svelte/transition";
 
-    let node;
+    let elementOnce;
+    let intersectOnce;
 </script>
 
-<IntersectionObserver element={node} let:intersecting>
-    <div bind:this={node}>
-        {#if intersecting}
+<IntersectionObserver once element={elementOnce} bind:intersecting={intersectOnce}>
+    <div bind:this={elementOnce}>
+        {#if intersectOnce}
         <div class="contactForm" transition:fade={{delay:300, duration: 500}}>
             <div class="lhs">
-                <h1 transition:fly="{{ y: 100, duration: 600 }}">Get in touch</h1>
-                <p transition:fly="{{ y: 100, duration: 600 }}">If you think we’re a good fit to work with, connect with us and we can take this further by scheduling a quick video call.  We look forward to working with you to create high-quality YouTube content that engages and entertains your audience.</p>
+                <h1 transition:fly="{{ y: 100, duration: 600, delay: 600 }}">Get in touch</h1>
+                <p transition:fly="{{ y: 100, duration: 600, delay: 600 }}">If you think we’re a good fit to work with, connect with us and we can take this further by scheduling a quick video call.  We look forward to working with you to create high-quality YouTube content that engages and entertains your audience.</p>
             </div>
             <div class="rhs">
                 <form action="">

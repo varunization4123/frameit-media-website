@@ -3,13 +3,14 @@
     import IntersectionObserver from "svelte-intersection-observer";
     import {fade} from "svelte/transition";
 
-    let node;
+    let elementOnce;
+    let intersectOnce;
 	
 </script>
 
-<IntersectionObserver element={node} let:intersecting>
-    <div bind:this={node}>
-        {#if intersecting}
+<IntersectionObserver once element={elementOnce} bind:intersecting={intersectOnce}>
+    <div bind:this={elementOnce}>
+        {#if intersectOnce}
         <div class="info" transition:fade={{delay: 300, duration: 500}}>
             <InfoCard icon="/images/ContentIcon.svg" title="Content" detail="Never miss an upload. We manage your (daily, weekly & monthly) upload schedule."/>
             <InfoCard icon="/images/EditingIcon.svg" title="Editing" detail="Our team of video editors can edit for retention and ensure your content is of the highest quality."/>

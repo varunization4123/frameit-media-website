@@ -7,14 +7,15 @@
         {testimonial: "Everything is possible with FrameIt Media's expert team of editors, Thumbnail Designers, Content Writers and Community Managers.They just make the whole process super smooth, I’ve never had to follow-up with them for any delays or issues of sort.They have an incredible feedback and correction system, making even the feedback system feellike a breeze.", name: "Abhinav Arora, CEO Avalon", img :"/images/Testimonial.png"},
         {testimonial: "Everything is possible with FrameIt Media's expert team of editors, Thumbnail Designers, Content Writers and Community Managers.They just make the whole process super smooth, I’ve never had to follow-up with them for any delays or issues of sort.They have an incredible feedback and correction system, making even the feedback system feellike a breeze.", name: "Shashank Udupa, CEO Avalon", img :"/images/Testimonial.png"},
     ];
-    let node;
+    let elementOnce;
+    let intersectOnce;
 </script>
 
-<IntersectionObserver element={node} let:intersecting>
-    <div bind:this={node}>
-        {#if intersecting}
-        <div class="testimonialSection" transition:fade={{delay:300, duration:500}}>
-            <h1 transition:fly="{{ y: 100, duration: 600 }}">
+<IntersectionObserver once element={elementOnce} bind:intersecting={intersectOnce}>
+    <div bind:this={elementOnce}>
+        {#if intersectOnce}
+        <div class="testimonialSection" transition:fade={{delay:600, duration:500}}>
+            <h1 transition:fly="{{ y: 300, duration: 600, delay:600 }}">
             We’ve worked with lots of creators over the years
             </h1>
             <div class="cards">

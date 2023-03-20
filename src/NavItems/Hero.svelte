@@ -19,7 +19,7 @@
         margin: 0% auto;
     }
     .heroText{
-        margin: 8% 0% 24% 0%;
+        margin: 12% 0% 16% 0%;
     }
     h1 {
         max-width: 500px;

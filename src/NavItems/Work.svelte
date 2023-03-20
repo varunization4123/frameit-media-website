@@ -9,17 +9,18 @@
         {style:"Niklas Christl", detail:"Visual Story telling", video: "https://www.youtube.com/embed/TByW5-HDYTA"},
         ];
     import IntersectionObserver from "svelte-intersection-observer";
-    import {fade, fly} from "svelte/transition";
+    import { fly} from "svelte/transition";
 
-    let node;
+    let elementOnce;
+    let intersectOnce;
 </script>
 
-<IntersectionObserver element={node} let:intersecting>
-    <div bind:this={node}>
-        {#if intersecting}
+<IntersectionObserver once element={elementOnce} bind:intersecting={intersectOnce}>
+    <div bind:this={elementOnce}>
+        {#if intersectOnce}
         <div>
-            <h1 transition:fly="{{ y: 100, duration: 600 }}">Our previous work, our pride</h1>
-            <h3 transition:fly="{{ y: 100, duration: 600 }}">We’ve re-created some of the most famous styles, such as Vox Animation, Johnny Harris, Athletic Interest, Ali Abdaal, Cred, Patriot Act and more...</h3>
+            <h1 transition:fly="{{ y: 100, duration: 600, delay: 1000 }}">Our previous work, our pride</h1>
+            <h3 transition:fly="{{ y: 100, duration: 600, delay: 1000 }}">We’ve re-created some of the most famous styles, such as Vox Animation, Johnny Harris, Athletic Interest, Ali Abdaal, Cred, Patriot Act and more...</h3>
             <div class="work">
                 {#each works as work}
                 <WorkCard style={work.style} detail={work.detail} video={work.video}/>

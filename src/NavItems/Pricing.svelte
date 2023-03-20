@@ -3,15 +3,16 @@
     import IntersectionObserver from "svelte-intersection-observer";
     import {fade, fly} from "svelte/transition";
 
-    let node;
+    let elementOnce;
+    let intersectOnce;
 </script>
 
-<IntersectionObserver element={node} let:intersecting>
-    <div bind:this={node}>
-        {#if intersecting}
-        <div class="pricingSection" transition:fade={{delay: 300, duration: 500}}>
-            <h1 transition:fly="{{ y: 100, duration: 600 }}">Pricing designed for your specific needs</h1>
-            <h5 transition:fly="{{ y: 100, duration: 600 }}">Unlock your YouTube potential by upgrading your editing, streamlining your process, better CTR, build loyalty with your community, run cohorts and more.</h5>
+<IntersectionObserver once element={elementOnce} bind:intersecting={intersectOnce}>
+    <div bind:this={elementOnce}>
+        {#if intersectOnce}
+        <div class="pricingSection" transition:fade={{delay: 1000, duration: 500}}>
+            <h1 transition:fly="{{ y: 100, duration: 600, delay: 1000 }}">Pricing designed for your specific needs</h1>
+            <h5 transition:fly="{{ y: 100, duration: 600, delay: 1000 }}">Unlock your YouTube potential by upgrading your editing, streamlining your process, better CTR, build loyalty with your community, run cohorts and more.</h5>
             <div class="pricingCards">
                 <PricingCard title="Basic" description="For creators looking to better their editing game and delegating the basic editing tasks" price="120" link="#"/>
                 <PricingCard title="Pro" description="For creators looking to better their editing game, CTR and with professional Thumbnail designs and high retention editing" price="190" link="#"/>
