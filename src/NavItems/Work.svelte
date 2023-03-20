@@ -20,7 +20,7 @@
         <div>
             <h1 transition:fly="{{ y: 100, duration: 600 }}">Our previous work, our pride</h1>
             <h3 transition:fly="{{ y: 100, duration: 600 }}">We’ve re-created some of the most famous styles, such as Vox Animation, Johnny Harris, Athletic Interest, Ali Abdaal, Cred, Patriot Act and more...</h3>
-            <div class="work" transition:fade={{delay:300, duration:500}}>
+            <div class="work">
                 {#each works as work}
                 <WorkCard style={work.style} detail={work.detail} video={work.video}/>
                 {/each}
