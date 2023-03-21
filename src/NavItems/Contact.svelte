@@ -15,7 +15,7 @@
                 <p transition:fly="{{ y: 100, duration: 600, delay: 600 }}">If you think we’re a good fit to work with, connect with us and we can take this further by scheduling a quick video call.  We look forward to working with you to create high-quality YouTube content that engages and entertains your audience.</p>
             </div>
             <div class="rhs">
-                <form action="">
+                <form name="contact" data-netlify="true" method="POST">
                     <input id="firstName" type="text" placeholder="First Name">
                     <input id="lastName" type="text" placeholder="Last Name">
                     <input id="emailAddress" type="text" placeholder="Email Address">
