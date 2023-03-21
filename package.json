@@ -20,7 +20,6 @@
     "svelte-intersection-observer": "^0.10.0"
   },
   "dependencies": {
-    "@sveltejs/adapter-netlify": "^2.0.6",
     "sirv-cli": "^2.0.0"
   }
 }
