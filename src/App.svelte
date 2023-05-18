@@ -30,9 +30,6 @@
 		margin: 0 auto;
 		overflow: visible;
 	}
-	.spacer{
-		height: 220px;
-	}
 	@media (max-width: 640px) {
 		main {
 			max-width: none;
