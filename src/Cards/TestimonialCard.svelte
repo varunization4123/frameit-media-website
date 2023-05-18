@@ -15,7 +15,8 @@
         max-width: 960px;
         border: solid;
         border-radius: 10px;
-        border-color: #fff;
+        border-width: 2px;
+        border-color: #7e7e7e;
         padding: 4% 4%;
         margin: 5% 5%;
         display: grid;
@@ -40,10 +41,15 @@
             min-width: 240px;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             margin: 1% 1%;
-            padding: 3% 3%;
+            padding: 5% 5%;
         }
         img{
             max-width: 120px;
+        }
+    }
+    @media (max-width: 420px){
+        .testimonial{
+            padding: 5% 5%;
         }
     }
 </style>

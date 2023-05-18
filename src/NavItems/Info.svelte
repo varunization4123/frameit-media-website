@@ -28,9 +28,9 @@
         max-width: 960px;
         margin: 5% auto;
     }
-    @media(max-width: 940px){
+    @media(max-width: 960px){
         .info{
-            margin-bottom: 35%;
+            margin-bottom: 25%;
             justify-content: center;
         }
     }

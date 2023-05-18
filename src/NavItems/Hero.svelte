@@ -14,7 +14,7 @@
 
 <style>
     .container{
-        max-width: 960px;
+        max-width: 1080px;
         min-height: 1vh;
         margin: 0% auto;
     }
@@ -22,13 +22,14 @@
         margin: 12% 0% 16% 0%;
     }
     h1 {
-        max-width: 500px;
+        max-width: 80%;
         font-size: 48px;
         color: white;
         font-weight: bolder;
         text-align: center;
         margin: 28px auto ;
         line-height: 48px;
+        text-shadow: 0 0 4px rgb(255, 255, 255);
     }
     .highlight{
         background: linear-gradient(120deg, #c97800 0%, #c97800 100%);
@@ -51,8 +52,10 @@
     @media (max-width: 640px)
     {
         h1{
+            width: 100%;
             font-size: 30px;
-            line-height: 30px;
+            line-height: 33px;
+            margin: 12px auto ;
         }
     }
 </style>

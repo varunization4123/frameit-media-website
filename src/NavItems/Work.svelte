@@ -18,9 +18,9 @@
 <IntersectionObserver once element={elementOnce} bind:intersecting={intersectOnce}>
     <div bind:this={elementOnce}>
         {#if intersectOnce}
-        <div>
+        <div class="workSection">
             <h1 transition:fly="{{ y: 100, duration: 600, delay: 1000 }}">Our previous work, our pride</h1>
-            <h3 transition:fly="{{ y: 100, duration: 600, delay: 1000 }}">We’ve re-created some of the most famous styles, such as Vox Animation, Johnny Harris, Athletic Interest, Ali Abdaal, Cred, Patriot Act and more...</h3>
+            <p transition:fly="{{ y: 100, duration: 600, delay: 1000 }}">We’ve re-created some of the most famous styles, such as Vox Animation, Johnny Harris, Athletic Interest, Ali Abdaal, Cred, Patriot Act and more...</p>
             <div class="work">
                 {#each works as work}
                 <WorkCard style={work.style} detail={work.detail} video={work.video}/>
@@ -32,46 +32,60 @@
 </IntersectionObserver> 
 
 <style>
-    div{
+    .workSection{
+        height: auto;
         max-width: 960px;
         margin: 1% auto;
         flex-wrap: wrap;
         overflow: visible;
     }
-    h1, h3{
-        max-width: 540px;
+    h1, p{
+        max-width: 80%;
     }
     h1{
+        background: -webkit-linear-gradient(rgb(241, 158, 3), rgb(241, 72, 4));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         margin: 5% auto;
         line-height: 30px;
     }
-    h3{
+    p{
         font-weight: 500;
         margin: 0% auto 6% auto;
     }
     .work{
-        margin: 2% auto;
         justify-items: center;
-        grid-gap: 2%;
+        grid-gap: 1%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
     }
     @media(max-width: 960px){
-        div{
-            margin-bottom: 30%;
+        .workSection{
+            margin-bottom: 20%;
             padding: 5% 5%;
+        }  
+        .work{
+            grid-gap: 5%;
         }
     }
     @media(max-width: 640px){
+        .workSection{
+            margin-bottom: 40%;
+            padding: 0% 0%;
+        }
         h1{
             font-size: 22px;
             line-height: 22px;
         }
-        h3{
+        p{
             font-size: 18px;
             line-height: 18px;
             font-weight: 200;
+        }
+        .work{
+            grid-template-columns: 1fr;
+            grid-gap: 2%;
         }
     }
 </style>

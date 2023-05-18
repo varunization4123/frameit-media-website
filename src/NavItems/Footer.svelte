@@ -1,7 +1,7 @@
 <div class="border"></div>
 <div class="footer">
     <div class="lhs">
-        <img src="/images/logo.png" alt="">
+        <img src="/images/logo-footer.png" alt="">
     </div>
     <div class="rhs">
         <ul>

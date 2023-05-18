@@ -5,6 +5,7 @@
 	import Pricing from "./NavItems/Pricing.svelte";
     import Testimonial from "./NavItems/Testimonial.svelte";
     import Work from "./NavItems/Work.svelte";
+	import Clients from "./NavItems/Clients.svelte";
     import Contact from "./NavItems/Contact.svelte";
     import Footer from "./NavItems/Footer.svelte";
 	
@@ -17,7 +18,7 @@
 	<Pricing />
 	<Testimonial />
 	<Work />
-	<div class="spacer"></div>
+	<Clients />
 	<Contact />
 	<Footer />
 </main>

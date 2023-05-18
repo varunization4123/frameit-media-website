@@ -26,13 +26,19 @@
         padding: 4% 3%;
         background-color: #ffffff21;
         margin: 1% 2%;
-        transition: 0.3s;
+        transition: 0.6s;
     }
-    .card:hover{
+    .card:hover {
         border-color: #e38800;
+    }
+    .card:hover h1{
+        background: -webkit-linear-gradient(rgb(241, 158, 3), rgb(241, 72, 4));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     h1{
         text-align: left;
+        transition: 0.3s;
     }
     span h1, span p{
         text-align: left;
@@ -41,6 +47,7 @@
     p{
         text-align: left;
         max-width: 220px;
+        transition: 0.6s;
     }
     .spacing{
         height: 18px;
