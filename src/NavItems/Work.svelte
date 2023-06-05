@@ -4,7 +4,7 @@
         {style:"Vox Style Animaion", detail:"Stats & graph visualisation", video: "https://www.youtube.com/embed/TU3OXkUXQKo"},
         {style:"Johnny Harris style editing", detail:"Maps & Borders animation", video: "https://www.youtube.com/embed/JEa2y2CGW3k"},
         {style:"illui by Mike Lamb", detail:"Illustrations as 2D animations", video: "https://www.youtube.com/embed/4epNBed99nk"},
-        {style:"Mr Beast style editng", detail:"Super fast paced + animated subtitles", video: "https://www.youtube.com/shorts/embed/q5OAYjwVo7g"},
+        {style:"Mr Beast style editng", detail:"Super fast paced + animated subtitles", video: "https://www.youtube.com/embed/q5OAYjwVo7g"},
         {style:"Ali Abdaal", detail:"Illustrated visual cues", video: "https://www.youtube.com/embed/TByW5-HDYTA"},
         {style:"Niklas Christl", detail:"Visual Story telling", video: "https://www.youtube.com/embed/TByW5-HDYTA"},
         ];
