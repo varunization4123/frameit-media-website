@@ -14,9 +14,9 @@
             <h1 transition:fly="{{ y: 100, duration: 600, delay: 1000 }}">Pricing designed for your specific needs</h1>
             <p transition:fly="{{ y: 100, duration: 600, delay: 1000 }}">Unlock your YouTube potential by upgrading your editing, streamlining your process, better CTR, build loyalty with your community, run cohorts and more.</p>
             <div class="pricingCards">
-                <PricingCard title="Basic" description="For creators looking to better their editing game and delegating the basic editing tasks" price="120" link="#"/>
-                <PricingCard title="Pro" description="For creators looking to better their editing game, CTR and with professional Thumbnail designs and high retention editing" price="190" link="#"/>
-                <PricingCard title="Master" description="For creators who want to optimize their YouTube strategy with editing, CTR,  building community, running cohorts and more." price="299" link=""/>
+                <PricingCard title="Basic" description="For creators looking to better their editing game and delegating the basic editing tasks" price="199" link="#"/>
+                <PricingCard title="Pro" description="For creators looking to better their editing game, CTR and with professional Thumbnail designs and high retention editing" price="279" link="#"/>
+                <PricingCard title="Master" description="For creators who want to optimize their YouTube strategy with editing, CTR,  building community, running cohorts and more." price="399" link=""/>
             </div>
         </div>
         {/if}
